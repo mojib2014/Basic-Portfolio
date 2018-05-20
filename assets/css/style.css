@@ -1,86 +1,223 @@
 body {
     background: url("../images/light_grey.png");
-    /* margin: 0 auto; */
-    width: 100%;
     font-family: arial, 'helvetica neue', helvetica, sans-serif;
+    line-height: 34px;
+    font-size: 18px;
+    color: #777;
 
 }
-.navigation-container {
-    width: 100%;
-    padding: 30px;
-    font-size: 24px;
-    margin-bottom: 20px;
-    background: white;
-}
-.header {
-    position: fixed;
-    left: 230px;
-    top: 3px;
-    background: rgb(5, 99, 5);
-    color: white;
-    padding: 16px;
+
+* {
+    box-sizing: border-box;
 }
 
-.navbar {
-    position: fixed;
-    right: 221px;
-    top: 3px;
-    text-decoration-style: none;
-    padding: 16px;
-}
+/* General */
 .container {
-    width: 960px;
+    width: 100%;
+    max-width: 960px;
     margin: 0 auto;
-    height: 400px;
-    background: white;
-
+    clear: both;
 }
-.about-me {
+
+h1,
+h2,
+h3,
+p {
+    margin-bottom: 20px;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3, {
+
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-weight: 700;
+    color: #4aaaa5;
+}
+
+h1 {
+    padding-bottom: 20px;
     font-size: 30px;
-    color: rgb(5, 99, 5);
-    padding: 8px;
-}
-.paragraph {
-    padding: 8px;
+    line-height: 49px;
+    border-bottom: 3px solid #ddd;
 }
 
-.image {
+h2,
+h3 {
+    font-size: 22px;
+}
+
+/* header */
+#masthead {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    margin: 0 0 30px;
+    overflow: auto;
+    color: #fff;
+    background: #fff;
+    border-bottom: 2px solid #ccc;
+}
+
+#logo {
+    float: left;
+    width: 250px;
+    height: 90px;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 90px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background: #4aaaa5;
+}
+
+nav {
+    float: right;
+    margin-top: 25px;
+}
+
+nav a {
+    display: inline-block;
+    padding-left: 15px;
+    margin-left: 15px;
+    line-height: 18px;
+    color: #999;
+    text-decoration: none;
+    border-left: 1px solid #efefef;
+}
+
+nav a:first-child {
+    border-left: 0 none;
+}
+
+/* footer */
+footer {
+    padding: 30px 0;
+    clear: both;
+    font-size: 12px;
+    color: #fff;
+    color: #ccc;
+    text-align: center;
+    background: #666;
+    border-top: 8px solid #4aaaa5;
+    height: 50px;
+}
+
+h3, 
+h2 {
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    line-height: 22px;
+    border-bottom: 2px solid #eee;
+}
+
+/* main */
+#main-container {
+    padding-top: 130px;
+    min-height: calc(100vh - 70px);
+}
+
+.main-section {
+    float: left;
+    width: 100%;
+    max-width: 960px;
+    padding: 30px;
+    margin: 0 0 40px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+/* portfolio page */
+
+
+.friends {
+    position: relative;
+    float: left;
+    width: 270px;
+    margin: 20px 0 20px;
+    overflow: auto;  
+}
+
+.friends:nth-child(even) {
+    margin-right: 40px;
+}
+
+
+.friends img {
+    width: 100%;
+    border: 0 none;
+    opacity: 0.9;
+}
+
+
+.friends h3 {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 0;
+    font-weight: 300;
+    line-height: 30px;
+    color: #fff;
+    text-align: #4aaaa5;
+    border-bottom: 0;
+}
+
+.auth-image {
     float: left;
     width: 200px;
-    height: 200px;
-    margin-right: 8px;
+    height: auto;
+    margin-top: 10px;
+    margin-right: 25px;
 }
 
+.contact-form ul {
+    margin-bottom: 20px;
+}
 
-.footer { 
-    text-align: center;
+.contact-form li {
+    margin-bottom: 10px;
+}
+
+lable,
+input[type=text],
+input[type=email],
+textarea {
+    display: block;
     width: 100%;
-    background: lightgray;
-    bottom: 4px;
-    padding: 10px;
-    position: fixed;
-    color: black;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    height: 35px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+}
+
+textarea {
+    height: 200px;
+}
+
+input[type=submit] {
+    padding: 10px 30px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    background: #4aaaa5;
+    border: 0 none;
 }
 
 
-/* styling contact.html from here below */
-
-.message {
-    font-size: 30px;
-    color: rgb(5, 99, 5);
-    padding: 8px;
-    margin-left: 10px;
-    /* float: left; */
-}
-.input {
-    /* width: 960px; */
-    margin: 2px 2px 2px 2px;
-    text-align: center;
+a:hover {
+    color: rgb(16, 7, 196);
+    background: #4aaaa5;
 }
 
-/* portfolio.html styles start from here */
-.portfolio {
-    font-size: 30px;
-    margin-left: 8px;
-    color: rgb(5, 99, 5);
-}
